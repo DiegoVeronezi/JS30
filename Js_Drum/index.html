@@ -7,11 +7,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-    <link rel="shortcut icon" href="img/drum.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Js_Drum</title>
+    <link rel="shortcut icon" href="img/drum_icon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <title>MEGADRUM</title>
 </head>
 <body>
+       
+    <span class="base_sound" id="base_sound" onClick="togglePlay()">
+        <img id="img_sound" src="" alt="TurnON">
+    </span>    
+
+
 
     <div class="keys">
         <div data-key="65" class="key">
@@ -60,29 +66,10 @@
     <audio data-key="72" src="audio/ride.wav"></audio>
     <audio data-key="74" src="audio/snare.wav"></audio>
     <audio data-key="75" src="audio/tom.wav"></audio>
-    <audio data-key="76" src="audio/tink.wav"></audio>
+    <audio data-key="76" src="audio/tink.wav"></audio>  
+    <audio loop id="base" src="audio/FunkBlues.mp3"></audio>  
 
-    <script>    
-    function removeTransition(e) {
-        if (e.propertyName !== 'transform') return;
-        e.target.classList.remove('playing');
-    }
 
-    function playSound(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-     if (!audio) return;
-        key.classList.add('playing');
-        audio.currentTime = 0;
-        audio.play();
-    }
-
-     const keys = Array.from(document.querySelectorAll('.key'));
-     keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-     window.addEventListener('keydown', playSound);    
-        
-    </script>
-
-    
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
