@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-size: 2rem;
+    display:flex;
+    flex:1;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  .clock {
+    width: 25rem;
+    height: 25rem;
+    border:20px solid #0485a5;
+    border-radius: 50%;
+    margin:50px auto;
+    position: relative;
+    padding:2rem;
+    box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px rgb(145, 0, 0),
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+  }
+  .clock-face {
+    position: relative;
+    width: 115%;
+    height: 115%;
+    right: 8%;
+    transform: translateY(-32px); /* account for the height of the clock hands */
+    /* border: 2px solid; */
+    border-radius: 50%;
+    background-color: #e8fff7;
+    z-index: -1;
+  }
+  .hand {
+    width:44%;
+    height:6px;
+    border-radius: 10px;
+    background:black;
+    position: absolute;
+    top:50%;
+    left: 6%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+
+  .number{
+    /* border: 2px solid; */
+    position: absolute;
+    font-size: 4rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .top-number{
+    left: 51%;
+    transform: translate(-50%,11%);
+  }
+
+  .right-number{
+    left: 100%;
+    top: 51%;
+    transform: translate(-111%, -50%);
+  }
+
+  .bottom-number{
+    left: 50%;
+    bottom: -2.5%;
+    transform: translate(-50%,0);
+
+  }
+
+  .left-number{
+      top: 50%;
+      transform: translate(25%,-50%);
+  }
+
+  .dot{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border-radius: 50%;
+    border: 1px solid;
+  }
+
+  .shadow{
+    box-shadow: 1px 1px 10px black;
+
+  }

@@ -22,17 +22,12 @@ function togglePlay() {
   if (isPlaying) {
     img.src = 'img/play.png';   
     audioBase.pause();
+    isPlaying = false;
   } else {   
     img.src = 'img/pause.png';     
     audioBase.play();
+    isPlaying = true;
   }
-};
-
-audioBase.onplaying = function() {
-  isPlaying = true;
-};
-audioBase.onpause = function() {
-  isPlaying = false;
 };
 
  const keys = Array.from(document.querySelectorAll('.key'));
