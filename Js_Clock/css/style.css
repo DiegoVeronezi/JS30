@@ -1,4 +1,10 @@
 body {
+
+    background: -moz-linear-gradient(left, #30cfc7 0%, #18c5d0 58%, #07bed6 100%);
+    background: -webkit-linear-gradient(left, #30cfc7 0%, #18c5d0 58%, #07bed6 100%);
+    background: -o-linear-gradient(left, #30cfc7 0%, #18c5d0 58%, #07bed6 100%);
+    background: -ms-linear-gradient(left, #30cfc7 0%, #18c5d0 58%, #07bed6 100%);
+    background: linear-gradient(to right, #30cfc7 0%, #18c5d0 58%, #07bed6 100%);
     margin: 0;
     font-size: 2rem;
     display:flex;
@@ -10,13 +16,13 @@ body {
   .clock {
     width: 25rem;
     height: 25rem;
-    border:20px solid #0485a5;
+    border:20px solid #ffcf67;
     border-radius: 50%;
     margin:50px auto;
     position: relative;
-    padding:2rem;
+    padding:1.7rem;
     box-shadow:
-      0 0 0 4px rgba(0,0,0,0.1),
+      12px -3px 15px #000000,
       inset 0 0 0 3px rgb(145, 0, 0),
       inset 0 0 10px black,
       0 0 10px rgba(0,0,0,0.2);
@@ -45,6 +51,15 @@ body {
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
   }
+
+  .second-hand{
+    background-color: #d40000;
+  }
+
+  /* .hour-hand{
+    width: 20%;
+    left: 30%;
+  } */
 
   .number{
     /* border: 2px solid; */
@@ -86,6 +101,7 @@ body {
     background-color: black;
     border-radius: 50%;
     border: 1px solid;
+    z-index: 1;
   }
 
   .shadow{
