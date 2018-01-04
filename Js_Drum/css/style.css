@@ -31,6 +31,7 @@ h2{
     margin: 0;
     font-size: 80px;
     font-family: 'Barrio', cursive;
+    text-transform: uppercase;
 }
 
 .keys{
